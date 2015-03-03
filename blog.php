@@ -20,7 +20,7 @@
 
 			<div class="col-md-6 both">
 				
-				<h3>Fugiat exercitation quis</h3>
+				<h3>Come Join Us</h3>
 
 				<br>
 
