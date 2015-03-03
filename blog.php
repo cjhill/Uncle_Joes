@@ -6,7 +6,7 @@
 			
 			<div class="col-md-6 both">
 				
-				<h3>Lorem ipsum Velit nisi</h3>
+				<h3>Welcome To My Blog</h3>
 
 				<br>
 
