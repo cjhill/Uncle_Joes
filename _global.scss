@@ -1,0 +1,274 @@
+/* ==========================================================================
+Variables
+========================================================================== */
+
+
+$black: #242424;
+$black2: #111;
+$white: #fff;
+$gray: #666;
+$lightGray: #f8f8f8;
+$colorOne: #EE1C24;
+
+
+/* ==========================================================================
+Mixins and Extends
+========================================================================== */
+
+.align-center
+{
+    -ms-align-items: center;
+        align-items: center;
+}
+
+.justify-content
+{
+    -webkit-justify-content: center;
+       -moz-justify-content: center;
+        -ms-justify-content: center;
+         -o-justify-content: center;
+            justify-content: center;
+}
+
+.flex-end
+{
+    -webkit-justify-content: flex-end;
+       -moz-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+         -o-justify-content: flex-end;
+            justify-content: flex-end;
+}
+
+@mixin text_same_as_border($color, $fSize, $padding)
+{
+    font-size: $fSize;
+
+    padding: $padding;
+
+    text-transform: uppercase;
+
+    border-radius: 0;
+    background: $color;
+}
+
+
+*,
+*:before,
+*:after
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    text-rendering: optimizeLegibility;
+            font-smoothing: antialiased;
+         -o-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body
+{
+    font-family: 'proxima-nova',sans-serif;
+
+    height: 100%;
+}
+
+/* ==========================================================================
+Standard Styles
+========================================================================== */
+
+h1,
+h2,
+h3,
+h4
+{
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+
+h2
+{
+    color: $colorOne;
+}
+
+h3
+{
+    color: $colorOne;
+}
+
+p
+{
+    font-weight: 300;
+}
+
+/* ==========================================================================
+NAV
+========================================================================== */
+
+nav
+{
+    position: fixed;
+
+    display: flex;
+
+    width: 100%;
+
+    background: $black;
+
+    @extend .align-center;
+    .one
+    {
+        float: left;
+    }
+    .two
+    {
+        float: right;
+        ul
+        {
+            display: flex;
+
+            @extend .flex-end;
+            li
+            {
+                display: inline-block;
+                a
+                {
+                    font-size: .8em;
+                    font-weight: 300;
+
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+
+.jumbotron
+{
+    display: flex;
+
+    text-transform: uppercase;
+
+    color: $white;
+    background: $black;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @extend .align-center;
+    p
+    {
+        color: $gray;
+    }
+}
+
+/* ==========================================================================
+ABOUT
+========================================================================== */
+
+#about
+{
+    display: flex;
+
+    text-align: center;
+
+    color: $black;
+
+    @extend .align-center;
+    hr
+    {
+        margin: 0 auto;
+
+        border: 2px solid $black;
+    }
+}
+
+/* ==========================================================================
+BLOG
+========================================================================== */
+
+#blog
+{
+    background: linear-gradient(
+    rgba(255, 255, 255, .9),
+    rgba(255, 255, 255, .9)
+    ), url(img/banner/banner1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    .container
+    {
+        display: flex;
+
+        height: 100%;
+
+        @extend .align-center;
+        p
+        {
+            color: $gray;
+            &:after
+            {
+                content: '..';
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+EMAIL
+========================================================================== */
+
+#email
+{
+    display: flex;
+
+    @extend .align-center;
+}
+
+/* ==========================================================================
+FOOTER
+========================================================================== */
+
+footer
+{
+    display: flex;
+
+    color: #fff;
+    background: $black;
+
+    @extend .align-center;
+    h4
+    {
+        color: $gray;
+    }
+    a
+    {
+        color: $white;
+    }
+    form
+    {
+        input,
+        textarea
+        {
+            display: block;
+
+            width: 100%;
+
+            border: none;
+        }
+        a
+        {
+            color: $gray;
+        }
+    }
+}

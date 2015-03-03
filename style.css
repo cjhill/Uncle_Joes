@@ -1,0 +1,291 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ==========================================================================
+Variables
+========================================================================== */
+/* ==========================================================================
+Mixins and Extends
+========================================================================== */
+.align-center, nav, .jumbotron, #about, #blog .container, #email, footer {
+  -ms-align-items: center;
+  align-items: center; }
+
+.justify-content {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; }
+
+.flex-end, nav .two ul {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; }
+
+html,
+body {
+  font-family: 'proxima-nova',sans-serif;
+  height: 100%; }
+
+/* ==========================================================================
+Standard Styles
+========================================================================== */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  text-transform: uppercase; }
+
+h2 {
+  color: #EE1C24; }
+
+h3 {
+  color: #EE1C24; }
+
+p {
+  font-weight: 300; }
+
+/* ==========================================================================
+NAV
+========================================================================== */
+nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background: #242424; }
+  nav .one {
+    float: left; }
+  nav .two {
+    float: right; }
+    nav .two ul {
+      display: flex; }
+      nav .two ul li {
+        display: inline-block; }
+        nav .two ul li a {
+          font-size: .8em;
+          font-weight: 300;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: #666; }
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+.jumbotron {
+  display: flex;
+  text-transform: uppercase;
+  color: #fff;
+  background: #242424;
+  background-attachment: fixed;
+  background-size: cover; }
+  .jumbotron p {
+    color: #666; }
+
+/* ==========================================================================
+ABOUT
+========================================================================== */
+#about {
+  display: flex;
+  text-align: center;
+  color: #242424; }
+  #about hr {
+    margin: 0 auto;
+    border: 2px solid #242424; }
+
+/* ==========================================================================
+BLOG
+========================================================================== */
+#blog {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(img/banner/banner1.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+  #blog .container {
+    display: flex;
+    height: 100%; }
+    #blog .container p {
+      color: #666; }
+      #blog .container p:after {
+        content: '..'; }
+
+/* ==========================================================================
+EMAIL
+========================================================================== */
+#email {
+  display: flex; }
+
+/* ==========================================================================
+FOOTER
+========================================================================== */
+footer {
+  display: flex;
+  color: #fff;
+  background: #242424; }
+  footer h4 {
+    color: #666; }
+  footer a {
+    color: #fff; }
+  footer form input,
+  footer form textarea {
+    display: block;
+    width: 100%;
+    border: none; }
+  footer form a {
+    color: #666; }
+
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+    /* ==========================================================================
+Standard Sizes
+========================================================================== */
+  h1 {
+    font-size: 4em;
+    font-weight: 800; }
+
+  h2 {
+    font-size: 1.4em;
+    letter-spacing: 0; }
+
+  h3 {
+    font-size: 1.4em; }
+
+  h4 {
+    font-size: .8em;
+    letter-spacing: 7px; }
+
+  p {
+    line-height: 25px; }
+
+    /* ==========================================================================
+NAV
+========================================================================== */
+  nav {
+    height: 5%; }
+    nav li {
+      margin-right: 19px; }
+
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+  .jumbotron {
+    height: 100%; }
+    .jumbotron .container {
+      text-align: center; }
+      .jumbotron .container h1 {
+        font-size: 6em;
+        letter-spacing: -3px; }
+      .jumbotron .container p {
+        font-size: 3em; }
+      .jumbotron .container a {
+        font-size: 2px;
+        padding: 20px;
+        text-transform: uppercase;
+        border-radius: 0;
+        background: red; }
+
+    /* ==========================================================================
+ABOUT
+========================================================================== */
+  #about {
+    min-height: 50%; }
+    #about .container {
+      width: 30%; }
+      #about .container hr {
+        width: 10%; }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+  #blog {
+    height: 100%;
+    min-height: 100%; }
+    #blog a {
+      color: #fff;
+      font-size: 0.7em;
+      padding: 10px;
+      text-transform: uppercase;
+      border-radius: 0;
+      background: #242424; }
+    #blog .both a {
+      margin-bottom: 50%; }
+
+    /* ==========================================================================
+EMAIL
+========================================================================== */
+  #email {
+    height: 20%; }
+    #email h2 {
+      letter-spacing: 9px; }
+
+    /* ==========================================================================
+VIDEOS
+========================================================================== */
+  #videos {
+    height: 70%; }
+    #videos .row {
+      height: 100%; }
+      #videos .row .all {
+        height: 100%; }
+
+    /* ==========================================================================
+FOOTER
+========================================================================== */
+  footer {
+    height: 50%; }
+    footer li {
+      margin-bottom: 4px; }
+    footer form input {
+      height: 40px; }
+    footer form textarea {
+      height: 200px; }
+    footer form a {
+      font-size: 0.7em;
+      padding: 10px;
+      text-transform: uppercase;
+      border-radius: 0;
+      background: #f8f8f8; } }
+/* Large Devices, Wide Screens */
+
+/*# sourceMappingURL=style.css.map */
